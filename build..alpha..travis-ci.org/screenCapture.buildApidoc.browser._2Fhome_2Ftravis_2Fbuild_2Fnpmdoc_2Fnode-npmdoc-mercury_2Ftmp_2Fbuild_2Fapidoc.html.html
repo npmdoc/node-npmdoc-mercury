@@ -1,0 +1,1871 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/Raynos/mercury">mercury (v14.1.0)</a>
+</h1>
+<h4>A truly modular frontend framework</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mercury">module mercury</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.BaseEvent">
+            function <span class="apidocSignatureSpan">mercury.</span>BaseEvent
+            <span class="apidocSignatureSpan">(lambda)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.Delegator">
+            function <span class="apidocSignatureSpan">mercury.</span>Delegator
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.app">
+            function <span class="apidocSignatureSpan">mercury.</span>app
+            <span class="apidocSignatureSpan">(elem, observ, render, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.array">
+            function <span class="apidocSignatureSpan">mercury.</span>array
+            <span class="apidocSignatureSpan">(initialList)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.changeEvent">
+            function <span class="apidocSignatureSpan">mercury.</span>changeEvent
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.channels">
+            function <span class="apidocSignatureSpan">mercury.</span>channels
+            <span class="apidocSignatureSpan">(funcs, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.clickEvent">
+            function <span class="apidocSignatureSpan">mercury.</span>clickEvent
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.computed">
+            function <span class="apidocSignatureSpan">mercury.</span>computed
+            <span class="apidocSignatureSpan">(observables, lambda)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.create">
+            function <span class="apidocSignatureSpan">mercury.</span>create
+            <span class="apidocSignatureSpan">(vnode, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.diff">
+            function <span class="apidocSignatureSpan">mercury.</span>diff
+            <span class="apidocSignatureSpan">(a, b)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.event">
+            function <span class="apidocSignatureSpan">mercury.</span>event
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.h">
+            function <span class="apidocSignatureSpan">mercury.</span>h
+            <span class="apidocSignatureSpan">(tagName, properties, children)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.handles">
+            function <span class="apidocSignatureSpan">mercury.</span>handles
+            <span class="apidocSignatureSpan">(funcs, context)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.hash">
+            function <span class="apidocSignatureSpan">mercury.</span>hash
+            <span class="apidocSignatureSpan">(struct)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.input">
+            function <span class="apidocSignatureSpan">mercury.</span>input
+            <span class="apidocSignatureSpan">(names)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.keyEvent">
+            function <span class="apidocSignatureSpan">mercury.</span>keyEvent
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.main">
+            function <span class="apidocSignatureSpan">mercury.</span>main
+            <span class="apidocSignatureSpan">(initialState, view, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.partial">
+            function <span class="apidocSignatureSpan">mercury.</span>partial
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.patch">
+            function <span class="apidocSignatureSpan">mercury.</span>patch
+            <span class="apidocSignatureSpan">(rootNode, patches, renderOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.send">
+            function <span class="apidocSignatureSpan">mercury.</span>send
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.sendChange">
+            function <span class="apidocSignatureSpan">mercury.</span>sendChange
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.sendClick">
+            function <span class="apidocSignatureSpan">mercury.</span>sendClick
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.sendKey">
+            function <span class="apidocSignatureSpan">mercury.</span>sendKey
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.sendSubmit">
+            function <span class="apidocSignatureSpan">mercury.</span>sendSubmit
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.sendValue">
+            function <span class="apidocSignatureSpan">mercury.</span>sendValue
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.state">
+            function <span class="apidocSignatureSpan">mercury.</span>state
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.struct">
+            function <span class="apidocSignatureSpan">mercury.</span>struct
+            <span class="apidocSignatureSpan">(struct)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.submitEvent">
+            function <span class="apidocSignatureSpan">mercury.</span>submitEvent
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.value">
+            function <span class="apidocSignatureSpan">mercury.</span>value
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.valueEvent">
+            function <span class="apidocSignatureSpan">mercury.</span>valueEvent
+            <span class="apidocSignatureSpan">(fn, data, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.varhash">
+            function <span class="apidocSignatureSpan">mercury.</span>varhash
+            <span class="apidocSignatureSpan">(hash, createValue)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.watch">
+            function <span class="apidocSignatureSpan">mercury.</span>watch
+            <span class="apidocSignatureSpan">(observable, listener)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.mercury.Delegator">module mercury.Delegator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.Delegator.Delegator">
+            function <span class="apidocSignatureSpan">mercury.</span>Delegator
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.Delegator.allocateHandle">
+            function <span class="apidocSignatureSpan">mercury.Delegator.</span>allocateHandle
+            <span class="apidocSignatureSpan">(func)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.mercury.Delegator.transformHandle">
+            function <span class="apidocSignatureSpan">mercury.Delegator.</span>transformHandle
+            <span class="apidocSignatureSpan">(handle, broadcast)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mercury" id="apidoc.module.mercury">module mercury</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.BaseEvent" id="apidoc.element.mercury.BaseEvent">
+        function <span class="apidocSignatureSpan">mercury.</span>BaseEvent
+        <span class="apidocSignatureSpan">(lambda)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function BaseEvent(lambda) {
+    return EventHandler;
+
+    function EventHandler(fn, data, opts) {
+        var handler = {
+            fn: fn,
+            data: data !== undefined ? data : {},
+            opts: opts || {},
+            handleEvent: handleEvent
+        }
+
+        if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+            return Delegator.transformHandle(fn,
+                handleLambda.bind(handler))
+        }
+
+        return handler;
+    }
+
+    function handleLambda(ev, broadcast) {
+        if (this.opts.startPropagation &amp;&amp; ev.startPropagation) {
+            ev.startPropagation();
+        }
+
+        return lambda.call(this, ev, broadcast)
+    }
+
+    function handleEvent(ev) {
+        var self = this
+
+        if (self.opts.startPropagation &amp;&amp; ev.startPropagation) {
+            ev.startPropagation()
+        }
+
+        lambda.call(self, ev, broadcast)
+
+        function broadcast(value) {
+            if (typeof self.fn === 'function') {
+                self.fn(value)
+            } else {
+                self.fn.write(value)
+            }
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.Delegator" id="apidoc.element.mercury.Delegator">
+        function <span class="apidocSignatureSpan">mercury.</span>Delegator
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Delegator(opts) {
+    opts = opts || {}
+    var document = opts.document || globalDocument
+
+    var cacheKey = document[cacheTokenKey]
+
+    if (!cacheKey) {
+        cacheKey =
+            document[cacheTokenKey] = cuid()
+    }
+
+    var delegator = delegatorCache.delegators[cacheKey]
+
+    if (!delegator) {
+        delegator = delegatorCache.delegators[cacheKey] =
+            new DOMDelegator(document)
+    }
+
+    if (opts.defaultEvents !== false) {
+        for (var i = 0; i &lt; commonEvents.length; i++) {
+            delegator.listenTo(commonEvents[i])
+        }
+    }
+
+    return delegator
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function app(elem, observ, render, opts) {
+if (!elem) {
+    throw new Error(
+        'Element does not exist. ' +
+        'Mercury cannot be initialized.');
+}
+
+mercury.<span class="apidocCodeKeywordSpan">Delegator</span>(opts);
+var loop = mercury.main(observ(), render, extend({
+    diff: mercury.diff,
+    create: mercury.create,
+    patch: mercury.patch
+}, opts));
+
+elem.appendChild(loop.target);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.app" id="apidoc.element.mercury.app">
+        function <span class="apidocSignatureSpan">mercury.</span>app
+        <span class="apidocSignatureSpan">(elem, observ, render, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function app(elem, observ, render, opts) {
+    if (!elem) {
+        throw new Error(
+            'Element does not exist. ' +
+            'Mercury cannot be initialized.');
+    }
+
+    mercury.Delegator(opts);
+    var loop = mercury.main(observ(), render, extend({
+        diff: mercury.diff,
+        create: mercury.create,
+        patch: mercury.patch
+    }, opts));
+
+    elem.appendChild(loop.target);
+
+    return observ(loop.update);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+           type: 'button',
+           value: 'Click me!',
+           'ev-click': hg.send(state.channels.clicks)
+       })
+   ]);
+};
+
+hg.<span class="apidocCodeKeywordSpan">app</span>(document.body, App(), App.render);
+```
+
+### Basic Examples
+
+- [count](examples/count.js)
+- [shared-state](examples/shared-state.js)
+- [bmi-counter](examples/bmi-counter.js)
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.array" id="apidoc.element.mercury.array">
+        function <span class="apidocSignatureSpan">mercury.</span>array
+        <span class="apidocSignatureSpan">(initialList)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservArray(initialList) {
+    // list is the internal mutable list observ instances that
+    // all methods on `obs` dispatch to.
+    var list = initialList
+    var initialState = []
+
+    // copy state out of initialList into initialState
+    list.forEach(function (observ, index) {
+        initialState[index] = typeof observ === "function" ?
+            observ() : observ
+    })
+
+    var obs = Observ(initialState)
+    obs.splice = splice
+
+    // override set and store original for later use
+    obs._observSet = obs.set
+    obs.set = set
+
+    obs.get = get
+    obs.getLength = getLength
+    obs.put = put
+    obs.transaction = transaction
+
+    // you better not mutate this list directly
+    // this is the list of observs instances
+    obs._list = list
+
+    var removeListeners = list.map(function (observ) {
+        return typeof observ === "function" ?
+            addListener(obs, observ) :
+            null
+    });
+    // this is a list of removal functions that must be called
+    // when observ instances are removed from `obs.list`
+    // not calling this means we do not GC our observ change
+    // listeners. Which causes rage bugs
+    obs._removeListeners = removeListeners
+
+    obs._type = "observ-array"
+    obs._version = "3"
+
+    return ArrayMethods(obs, list)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.changeEvent" id="apidoc.element.mercury.changeEvent">
+        function <span class="apidocSignatureSpan">mercury.</span>changeEvent
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.channels" id="apidoc.element.mercury.channels">
+        function <span class="apidocSignatureSpan">mercury.</span>channels
+        <span class="apidocSignatureSpan">(funcs, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function channels(funcs, context) {
+    return Object.keys(funcs).reduce(createHandle, {});
+
+    function createHandle(acc, name) {
+        var handle = mercury.Delegator.allocateHandle(
+            funcs[name].bind(null, context));
+
+        acc[name] = handle;
+        return acc;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        copy.channels = mercury.value(null);
+    } else if ($handles) {
+        copy.handles = mercury.value(null);
+    }
+
+    var observ = mercury.struct(copy);
+    if ($channels) {
+        observ.channels.set(mercury.<span class="apidocCodeKeywordSpan">channels</span>($channels, observ));
+    } else if ($handles) {
+        observ.handles.set(mercury.channels($handles, observ));
+    }
+    return observ;
+}
+
+function channels(funcs, context) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.clickEvent" id="apidoc.element.mercury.clickEvent">
+        function <span class="apidocSignatureSpan">mercury.</span>clickEvent
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.computed" id="apidoc.element.mercury.computed">
+        function <span class="apidocSignatureSpan">mercury.</span>computed
+        <span class="apidocSignatureSpan">(observables, lambda)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function computed(observables, lambda) {
+    var values = observables.map(function (o) {
+        return o()
+    })
+    var result = Observable(lambda.apply(null, values))
+
+    observables.forEach(function (o, index) {
+        o(function (newValue) {
+            values[index] = newValue
+            result.set(lambda.apply(null, values))
+        })
+    })
+
+    return result
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.create" id="apidoc.element.mercury.create">
+        function <span class="apidocSignatureSpan">mercury.</span>create
+        <span class="apidocSignatureSpan">(vnode, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function createElement(vnode, opts) {
+    var doc = opts ? opts.document || document : document
+    var warn = opts ? opts.warn : null
+
+    vnode = handleThunk(vnode).a
+
+    if (isWidget(vnode)) {
+        return vnode.init()
+    } else if (isVText(vnode)) {
+        return doc.createTextNode(vnode.text)
+    } else if (!isVNode(vnode)) {
+        if (warn) {
+            warn("Item is not a valid virtual dom node", vnode)
+        }
+        return null
+    }
+
+    var node = (vnode.namespace === null) ?
+        doc.createElement(vnode.tagName) :
+        doc.createElementNS(vnode.namespace, vnode.tagName)
+
+    var props = vnode.properties
+    applyProperties(node, props)
+
+    var children = vnode.children
+
+    for (var i = 0; i &lt; children.length; i++) {
+        var childNode = createElement(children[i], opts)
+        if (childNode) {
+            node.appendChild(childNode)
+        }
+    }
+
+    return node
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.diff" id="apidoc.element.mercury.diff">
+        function <span class="apidocSignatureSpan">mercury.</span>diff
+        <span class="apidocSignatureSpan">(a, b)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function diff(a, b) {
+    var patch = { a: a }
+    walk(a, b, patch, 0)
+    return patch
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.event" id="apidoc.element.mercury.event">
+        function <span class="apidocSignatureSpan">mercury.</span>event
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.h" id="apidoc.element.mercury.h">
+        function <span class="apidocSignatureSpan">mercury.</span>h
+        <span class="apidocSignatureSpan">(tagName, properties, children)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function h(tagName, properties, children) {
+    var childNodes = [];
+    var tag, props, key, namespace;
+
+    if (!children &amp;&amp; isChildren(properties)) {
+        children = properties;
+        props = {};
+    }
+
+    props = props || properties || {};
+    tag = parseTag(tagName, props);
+
+    // support keys
+    if (props.hasOwnProperty('key')) {
+        key = props.key;
+        props.key = undefined;
+    }
+
+    // support namespace
+    if (props.hasOwnProperty('namespace')) {
+        namespace = props.namespace;
+        props.namespace = undefined;
+    }
+
+    // fix cursor bug
+    if (tag === 'INPUT' &amp;&amp;
+        !namespace &amp;&amp;
+        props.hasOwnProperty('value') &amp;&amp;
+        props.value !== undefined &amp;&amp;
+        !isHook(props.value)
+    ) {
+        props.value = softSetHook(props.value);
+    }
+
+    transformProperties(props);
+
+    if (children !== undefined &amp;&amp; children !== null) {
+        addChild(children, childNodes, tag, props);
+    }
+
+
+    return new VNode(tag, props, childNodes, key, namespace);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.handles" id="apidoc.element.mercury.handles">
+        function <span class="apidocSignatureSpan">mercury.</span>handles
+        <span class="apidocSignatureSpan">(funcs, context)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function channels(funcs, context) {
+    return Object.keys(funcs).reduce(createHandle, {});
+
+    function createHandle(acc, name) {
+        var handle = mercury.Delegator.allocateHandle(
+            funcs[name].bind(null, context));
+
+        acc[name] = handle;
+        return acc;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.hash" id="apidoc.element.mercury.hash">
+        function <span class="apidocSignatureSpan">mercury.</span>hash
+        <span class="apidocSignatureSpan">(struct)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservStruct(struct) {
+    var keys = Object.keys(struct)
+
+    var initialState = {}
+    var currentTransaction = NO_TRANSACTION
+    var nestedTransaction = NO_TRANSACTION
+
+    keys.forEach(function (key) {
+        if (blackList.indexOf(key) !== -1) {
+            throw new Error("cannot create an observ-struct " +
+                "with a key named '" + key + "'.\n" +
+                blackListReasons[key]);
+        }
+
+        var observ = struct[key]
+        initialState[key] = typeof observ === "function" ?
+            observ() : observ
+    })
+
+    var obs = Observ(initialState)
+    keys.forEach(function (key) {
+        var observ = struct[key]
+        obs[key] = observ
+
+        if (typeof observ === "function") {
+            observ(function (value) {
+                if (nestedTransaction === value) {
+                    return
+                }
+
+                var state = extend(obs())
+                state[key] = value
+                var diff = {}
+                diff[key] = value &amp;&amp; value._diff ?
+                    value._diff : value
+
+                setNonEnumerable(state, "_diff", diff)
+                currentTransaction = state
+                obs.set(state)
+                currentTransaction = NO_TRANSACTION
+            })
+        }
+    })
+    var _set = obs.set
+    obs.set = function trackDiff(value) {
+        if (currentTransaction === value) {
+            return _set(value)
+        }
+
+        var newState = extend(value)
+        setNonEnumerable(newState, "_diff", value)
+        _set(newState)
+    }
+
+    obs(function (newState) {
+        if (currentTransaction === newState) {
+            return
+        }
+
+        keys.forEach(function (key) {
+            var observ = struct[key]
+            var newObservValue = newState[key]
+
+            if (typeof observ === "function" &amp;&amp;
+                observ() !== newObservValue
+            ) {
+                nestedTransaction = newObservValue
+                observ.set(newState[key])
+                nestedTransaction = NO_TRANSACTION
+            }
+        })
+    })
+
+    obs._type = "observ-struct"
+    obs._version = "5"
+
+    return obs
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.input" id="apidoc.element.mercury.input">
+        function <span class="apidocSignatureSpan">mercury.</span>input
+        <span class="apidocSignatureSpan">(names)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function input(names) {
+    if (!names) {
+        return SingleEvent();
+    }
+
+    return MultipleEvent(names);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.keyEvent" id="apidoc.element.mercury.keyEvent">
+        function <span class="apidocSignatureSpan">mercury.</span>keyEvent
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.main" id="apidoc.element.mercury.main">
+        function <span class="apidocSignatureSpan">mercury.</span>main
+        <span class="apidocSignatureSpan">(initialState, view, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function main(initialState, view, opts) {
+    opts = opts || {}
+
+    var currentState = initialState
+    var create = opts.create
+    var diff = opts.diff
+    var patch = opts.patch
+    var redrawScheduled = false
+
+    var tree = opts.initialTree || view(currentState, 0);
+    var target = opts.target || create(tree, opts)
+    var inRenderingTransaction = false
+
+    currentState = null
+
+    var loop = {
+        state: initialState,
+        target: target,
+        update: update
+    }
+    return loop
+
+    function update(state) {
+        if (inRenderingTransaction) {
+            throw InvalidUpdateInRender({
+                diff: state._diff,
+                stringDiff: JSON.stringify(state._diff)
+            })
+        }
+
+        if (currentState === null &amp;&amp; !redrawScheduled) {
+            redrawScheduled = true
+            raf(redraw)
+        }
+
+        currentState = state
+        loop.state = state
+    }
+
+    function redraw(time) {
+        redrawScheduled = false
+        if (currentState === null) {
+            return
+        }
+
+        inRenderingTransaction = true
+        var newTree = view(currentState, time)
+
+        if (opts.createOnly) {
+            inRenderingTransaction = false
+            create(newTree, opts)
+        } else {
+            var patches = diff(tree, newTree, opts)
+            inRenderingTransaction = false
+            target = patch(target, patches, opts)
+        }
+
+        tree = newTree
+        currentState = null
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (!elem) {
+    throw new Error(
+        'Element does not exist. ' +
+        'Mercury cannot be initialized.');
+}
+
+mercury.Delegator(opts);
+var loop = mercury.<span class="apidocCodeKeywordSpan">main</span>(observ(), render, extend({
+    diff: mercury.diff,
+    create: mercury.create,
+    patch: mercury.patch
+}, opts));
+
+elem.appendChild(loop.target);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.partial" id="apidoc.element.mercury.partial">
+        function <span class="apidocSignatureSpan">mercury.</span>partial
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function partial(fn) {
+    var args = copyOver(arguments, 1);
+    var firstArg = args[0];
+    var key;
+
+    var eqArgs = eq || shallowEq;
+
+    if (typeof firstArg === 'object' &amp;&amp; firstArg !== null) {
+        if ('key' in firstArg) {
+            key = firstArg.key;
+        } else if ('id' in firstArg) {
+            key = firstArg.id;
+        }
+    }
+
+    return new Thunk(fn, args, key, eqArgs);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.patch" id="apidoc.element.mercury.patch">
+        function <span class="apidocSignatureSpan">mercury.</span>patch
+        <span class="apidocSignatureSpan">(rootNode, patches, renderOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function patch(rootNode, patches, renderOptions) {
+    renderOptions = renderOptions || {}
+    renderOptions.patch = renderOptions.patch &amp;&amp; renderOptions.patch !== patch
+        ? renderOptions.patch
+        : patchRecursive
+    renderOptions.render = renderOptions.render || render
+
+    return renderOptions.patch(rootNode, patches, renderOptions)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.send" id="apidoc.element.mercury.send">
+        function <span class="apidocSignatureSpan">mercury.</span>send
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+App.render = function render(state) {
+    return h('div.counter', [
+        'The state ', h('code', 'clickCount'),
+        ' has value: ' + state.value + '.', h('input.button', {
+            type: 'button',
+            value: 'Click me!',
+            'ev-click': hg.<span class="apidocCodeKeywordSpan">send</span>(state.channels.clicks)
+        })
+    ]);
+};
+
+hg.app(document.body, App(), App.render);
+```
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.sendChange" id="apidoc.element.mercury.sendChange">
+        function <span class="apidocSignatureSpan">mercury.</span>sendChange
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.sendClick" id="apidoc.element.mercury.sendClick">
+        function <span class="apidocSignatureSpan">mercury.</span>sendClick
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.sendKey" id="apidoc.element.mercury.sendKey">
+        function <span class="apidocSignatureSpan">mercury.</span>sendKey
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.sendSubmit" id="apidoc.element.mercury.sendSubmit">
+        function <span class="apidocSignatureSpan">mercury.</span>sendSubmit
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.sendValue" id="apidoc.element.mercury.sendValue">
+        function <span class="apidocSignatureSpan">mercury.</span>sendValue
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.state" id="apidoc.element.mercury.state">
+        function <span class="apidocSignatureSpan">mercury.</span>state
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function state(obj) {
+    var copy = extend(obj);
+    var $channels = copy.channels;
+    var $handles = copy.handles;
+
+    if ($channels) {
+        copy.channels = mercury.value(null);
+    } else if ($handles) {
+        copy.handles = mercury.value(null);
+    }
+
+    var observ = mercury.struct(copy);
+    if ($channels) {
+        observ.channels.set(mercury.channels($channels, observ));
+    } else if ($handles) {
+        observ.handles.set(mercury.channels($handles, observ));
+    }
+    return observ;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+'use strict';
+
+var document = require('global/document');
+var hg = require('mercury');
+var h = require('mercury').h;
+
+function App() {
+    return hg.<span class="apidocCodeKeywordSpan">state</span>({
+        value: hg.value(0),
+        channels: {
+            clicks: incrementCounter
+        }
+    });
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.struct" id="apidoc.element.mercury.struct">
+        function <span class="apidocSignatureSpan">mercury.</span>struct
+        <span class="apidocSignatureSpan">(struct)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservStruct(struct) {
+    var keys = Object.keys(struct)
+
+    var initialState = {}
+    var currentTransaction = NO_TRANSACTION
+    var nestedTransaction = NO_TRANSACTION
+
+    keys.forEach(function (key) {
+        if (blackList.indexOf(key) !== -1) {
+            throw new Error("cannot create an observ-struct " +
+                "with a key named '" + key + "'.\n" +
+                blackListReasons[key]);
+        }
+
+        var observ = struct[key]
+        initialState[key] = typeof observ === "function" ?
+            observ() : observ
+    })
+
+    var obs = Observ(initialState)
+    keys.forEach(function (key) {
+        var observ = struct[key]
+        obs[key] = observ
+
+        if (typeof observ === "function") {
+            observ(function (value) {
+                if (nestedTransaction === value) {
+                    return
+                }
+
+                var state = extend(obs())
+                state[key] = value
+                var diff = {}
+                diff[key] = value &amp;&amp; value._diff ?
+                    value._diff : value
+
+                setNonEnumerable(state, "_diff", diff)
+                currentTransaction = state
+                obs.set(state)
+                currentTransaction = NO_TRANSACTION
+            })
+        }
+    })
+    var _set = obs.set
+    obs.set = function trackDiff(value) {
+        if (currentTransaction === value) {
+            return _set(value)
+        }
+
+        var newState = extend(value)
+        setNonEnumerable(newState, "_diff", value)
+        _set(newState)
+    }
+
+    obs(function (newState) {
+        if (currentTransaction === newState) {
+            return
+        }
+
+        keys.forEach(function (key) {
+            var observ = struct[key]
+            var newObservValue = newState[key]
+
+            if (typeof observ === "function" &amp;&amp;
+                observ() !== newObservValue
+            ) {
+                nestedTransaction = newObservValue
+                observ.set(newState[key])
+                nestedTransaction = NO_TRANSACTION
+            }
+        })
+    })
+
+    obs._type = "observ-struct"
+    obs._version = "5"
+
+    return obs
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    if ($channels) {
+        copy.channels = mercury.value(null);
+    } else if ($handles) {
+        copy.handles = mercury.value(null);
+    }
+
+    var observ = mercury.<span class="apidocCodeKeywordSpan">struct</span>(copy);
+    if ($channels) {
+        observ.channels.set(mercury.channels($channels, observ));
+    } else if ($handles) {
+        observ.handles.set(mercury.channels($handles, observ));
+    }
+    return observ;
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.submitEvent" id="apidoc.element.mercury.submitEvent">
+        function <span class="apidocSignatureSpan">mercury.</span>submitEvent
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.value" id="apidoc.element.mercury.value">
+        function <span class="apidocSignatureSpan">mercury.</span>value
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Observable(value) {
+    var listeners = []
+    value = value === undefined ? null : value
+
+    observable.set = function (v) {
+        value = v
+        listeners.forEach(function (f) {
+            f(v)
+        })
+    }
+
+    return observable
+
+    function observable(listener) {
+        if (!listener) {
+            return value
+        }
+
+        listeners.push(listener)
+
+        return function remove() {
+            listeners.splice(listeners.indexOf(listener), 1)
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var document = require('global/document');
+var hg = require('mercury');
+var h = require('mercury').h;
+
+function App() {
+    return hg.state({
+        value: hg.<span class="apidocCodeKeywordSpan">value</span>(0),
+        channels: {
+            clicks: incrementCounter
+        }
+    });
+}
+
+function incrementCounter(state) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.valueEvent" id="apidoc.element.mercury.valueEvent">
+        function <span class="apidocSignatureSpan">mercury.</span>valueEvent
+        <span class="apidocSignatureSpan">(fn, data, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventHandler(fn, data, opts) {
+    var handler = {
+        fn: fn,
+        data: data !== undefined ? data : {},
+        opts: opts || {},
+        handleEvent: handleEvent
+    }
+
+    if (fn &amp;&amp; fn.type === 'dom-delegator-handle') {
+        return Delegator.transformHandle(fn,
+            handleLambda.bind(handler))
+    }
+
+    return handler;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.varhash" id="apidoc.element.mercury.varhash">
+        function <span class="apidocSignatureSpan">mercury.</span>varhash
+        <span class="apidocSignatureSpan">(hash, createValue)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ObservVarhash(hash, createValue) {
+  createValue = createValue || function (obj) { return obj }
+
+  var initialState = {}
+  var currentTransaction = NO_TRANSACTION
+  var nestedTransaction = NO_TRANSACTION
+
+  var obs = Observ(initialState)
+  setNonEnumerable(obs, '_removeListeners', {})
+
+  setNonEnumerable(obs, 'get', get.bind(obs))
+  setNonEnumerable(obs, 'put', put.bind(obs))
+  setNonEnumerable(obs, 'delete', del.bind(obs))
+
+  for (var key in hash) {
+    obs[key] = isFn(hash[key]) ? hash[key] : createValue(hash[key], key)
+
+    if (isFn(obs[key])) {
+      obs._removeListeners[key] = obs[key](watch(obs, key))
+    }
+  }
+
+  var _set = obs.set
+
+  obs.set = function trackDiff (value) {
+    if (currentTransaction === value) {
+      return _set(value)
+    }
+
+    var newState = extend(value)
+    setNonEnumerable(newState, '_diff', value)
+
+    _set(newState)
+  }
+  setNonEnumerable(obs, 'set', obs.set)
+
+  var newState = {}
+  for (key in hash) {
+    var observ = obs[key]
+    checkKey(key)
+    newState[key] = isFn(observ) ? observ() : observ
+  }
+  obs.set(newState)
+
+  obs(function (newState) {
+    if (currentTransaction === newState) {
+      return
+    }
+
+    for (var key in hash) {
+      var observ = hash[key]
+      var newObservValue = newState[key]
+
+      if (isFn(observ) &amp;&amp; observ() !== newState[key]) {
+        nestedTransaction = newObservValue
+        observ.set(newState[key])
+        nestedTransaction = NO_TRANSACTION
+      }
+    }
+  })
+
+  function put (key, val) {
+    checkKey(key)
+
+    if (val === undefined) {
+      throw new Error('cannot varhash.put(key, undefined).')
+    }
+
+    var observ = isFn(val) ? val : createValue(val, key)
+    var state = extend(this())
+
+    state[key] = isFn(observ) ? observ() : observ
+
+    if (isFn(this._removeListeners[key])) {
+      this._removeListeners[key]()
+    }
+
+    this._removeListeners[key] = isFn(observ)
+      ? observ(watch(this, key)) : null
+
+    setNonEnumerable(state, '_diff', diff(key, state[key]))
+
+    this[key] = observ
+
+    currentTransaction = state
+    _set(state)
+    currentTransaction = NO_TRANSACTION
+
+    return this
+  }
+
+  function del (key) {
+    var state = extend(this())
+    if (isFn(this._removeListeners[key])) {
+      this._removeListeners[key]()
+    }
+
+    delete this._removeListeners[key]
+    delete state[key]
+    delete this[key]
+
+    setNonEnumerable(state, '_diff', diff(key, undefined))
+    _set(state)
+
+    return this
+  }
+
+  return obs
+
+  // processing
+  function watch (obs, key) {
+    return function (value) {
+      if (nestedTransaction === value) {
+        return
+      }
+
+      var state = extend(obs())
+      state[key] = value
+
+      setNonEnumerable(state, '_diff', diff(key, value))
+
+      currentTransaction = state
+      obs.set(state)
+      currentTransaction = NO_TRANSACTION
+    }
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.watch" id="apidoc.element.mercury.watch">
+        function <span class="apidocSignatureSpan">mercury.</span>watch
+        <span class="apidocSignatureSpan">(observable, listener)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function watch(observable, listener) {
+    var remove = observable(listener)
+    listener(observable())
+    return remove
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.mercury.Delegator" id="apidoc.module.mercury.Delegator">module mercury.Delegator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.Delegator.Delegator" id="apidoc.element.mercury.Delegator.Delegator">
+        function <span class="apidocSignatureSpan">mercury.</span>Delegator
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Delegator(opts) {
+    opts = opts || {}
+    var document = opts.document || globalDocument
+
+    var cacheKey = document[cacheTokenKey]
+
+    if (!cacheKey) {
+        cacheKey =
+            document[cacheTokenKey] = cuid()
+    }
+
+    var delegator = delegatorCache.delegators[cacheKey]
+
+    if (!delegator) {
+        delegator = delegatorCache.delegators[cacheKey] =
+            new DOMDelegator(document)
+    }
+
+    if (opts.defaultEvents !== false) {
+        for (var i = 0; i &lt; commonEvents.length; i++) {
+            delegator.listenTo(commonEvents[i])
+        }
+    }
+
+    return delegator
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+function app(elem, observ, render, opts) {
+if (!elem) {
+    throw new Error(
+        'Element does not exist. ' +
+        'Mercury cannot be initialized.');
+}
+
+mercury.<span class="apidocCodeKeywordSpan">Delegator</span>(opts);
+var loop = mercury.main(observ(), render, extend({
+    diff: mercury.diff,
+    create: mercury.create,
+    patch: mercury.patch
+}, opts));
+
+elem.appendChild(loop.target);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.Delegator.allocateHandle" id="apidoc.element.mercury.Delegator.allocateHandle">
+        function <span class="apidocSignatureSpan">mercury.Delegator.</span>allocateHandle
+        <span class="apidocSignatureSpan">(func)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function allocateHandle(func) {
+    var handle = new Handle()
+
+    HANDLER_STORE(handle).func = func;
+
+    return handle
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    return observ;
+}
+
+function channels(funcs, context) {
+    return Object.keys(funcs).reduce(createHandle, {});
+
+    function createHandle(acc, name) {
+        var handle = mercury.Delegator.<span class="apidocCodeKeywordSpan">allocateHandle</span>(
+            funcs[name].bind(null, context));
+
+        acc[name] = handle;
+        return acc;
+    }
+}
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.mercury.Delegator.transformHandle" id="apidoc.element.mercury.Delegator.transformHandle">
+        function <span class="apidocSignatureSpan">mercury.Delegator.</span>transformHandle
+        <span class="apidocSignatureSpan">(handle, broadcast)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function transformHandle(handle, broadcast) {
+    var func = HANDLER_STORE(handle).func
+
+    return this.allocateHandle(function (ev) {
+        broadcast(ev, func);
+    })
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>

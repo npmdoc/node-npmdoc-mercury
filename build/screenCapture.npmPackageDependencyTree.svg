@@ -1,0 +1,58 @@
+<svg height="878" width="720" xmlns="http://www.w3.org/2000/svg">
+<rect height="878" fill="#555" width="720"></rect>
+<text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
+<tspan x="10" y="26">9 megabytes</tspan>
+<tspan x="10" y="42">└─┬ mercury@14.1.0 </tspan>
+<tspan x="10" y="58">  ├─┬ dom-delegator@13.1.0 </tspan>
+<tspan x="10" y="74">  │ ├─┬ cuid@1.3.8 </tspan>
+<tspan x="10" y="90">  │ │ ├── browser-fingerprint@0.0.1 </tspan>
+<tspan x="10" y="106">  │ │ ├── core-js@1.2.7 </tspan>
+<tspan x="10" y="122">  │ │ └── node-fingerprint@0.0.2 </tspan>
+<tspan x="10" y="138">  │ ├─┬ ev-store@7.0.0 </tspan>
+<tspan x="10" y="154">  │ │ └── individual@3.0.0 </tspan>
+<tspan x="10" y="170">  │ ├─┬ global@4.3.1 </tspan>
+<tspan x="10" y="186">  │ │ ├── min-document@2.19.0 </tspan>
+<tspan x="10" y="202">  │ │ └── process@0.5.2 </tspan>
+<tspan x="10" y="218">  │ ├── individual@2.0.0 </tspan>
+<tspan x="10" y="234">  │ ├── inherits@2.0.3 </tspan>
+<tspan x="10" y="250">  │ ├── weakmap-shim@1.1.1 </tspan>
+<tspan x="10" y="266">  │ └── xtend@2.2.0 </tspan>
+<tspan x="10" y="282">  ├── geval@2.2.0 </tspan>
+<tspan x="10" y="298">  ├─┬ http-hash-router@1.1.0 </tspan>
+<tspan x="10" y="314">  │ ├─┬ error@5.2.0 </tspan>
+<tspan x="10" y="330">  │ │ ├── camelize@1.0.0 </tspan>
+<tspan x="10" y="346">  │ │ ├── is-error@2.2.1 </tspan>
+<tspan x="10" y="362">  │ │ └── string-template@0.2.1 </tspan>
+<tspan x="10" y="378">  │ ├── http-hash@1.1.1 </tspan>
+<tspan x="10" y="394">  │ └─┬ http-methods@1.1.0 </tspan>
+<tspan x="10" y="410">  │   ├── body@0.1.0 </tspan>
+<tspan x="10" y="426">  │   └─┬ content-types@0.1.0 </tspan>
+<tspan x="10" y="442">  │     └─┬ iterators@0.1.0 </tspan>
+<tspan x="10" y="458">  │       └── ap@0.1.0 </tspan>
+<tspan x="10" y="474">  ├─┬ main-loop@3.4.0 </tspan>
+<tspan x="10" y="490">  │ ├── error@4.4.0 </tspan>
+<tspan x="10" y="506">  │ └─┬ raf@2.0.4 </tspan>
+<tspan x="10" y="522">  │   └── performance-now@0.1.4 </tspan>
+<tspan x="10" y="538">  ├── observ@0.2.0 </tspan>
+<tspan x="10" y="554">  ├─┬ observ-array@3.2.1 </tspan>
+<tspan x="10" y="570">  │ ├── adiff@0.2.13 </tspan>
+<tspan x="10" y="586">  │ └── xtend@3.0.0 </tspan>
+<tspan x="10" y="602">  ├─┬ observ-struct@5.0.1 </tspan>
+<tspan x="10" y="618">  │ └── xtend@3.0.0 </tspan>
+<tspan x="10" y="634">  ├─┬ observ-varhash@1.0.8 </tspan>
+<tspan x="10" y="650">  │ └── xtend@3.0.0 </tspan>
+<tspan x="10" y="666">  ├─┬ value-event@5.1.1 </tspan>
+<tspan x="10" y="682">  │ ├── dom-walk@0.1.1 </tspan>
+<tspan x="10" y="698">  │ ├── form-data-set@2.0.0 </tspan>
+<tspan x="10" y="714">  │ └── xtend@2.2.0 </tspan>
+<tspan x="10" y="730">  ├── vdom-thunk@3.0.0 </tspan>
+<tspan x="10" y="746">  ├─┬ virtual-dom@2.1.1 </tspan>
+<tspan x="10" y="762">  │ ├── browser-split@0.0.1 </tspan>
+<tspan x="10" y="778">  │ ├── error@4.4.0 </tspan>
+<tspan x="10" y="794">  │ ├── is-object@1.0.1 </tspan>
+<tspan x="10" y="810">  │ ├── next-tick@0.2.2 </tspan>
+<tspan x="10" y="826">  │ ├── x-is-array@0.1.0 </tspan>
+<tspan x="10" y="842">  │ └── x-is-string@0.1.0 </tspan>
+<tspan x="10" y="858">  └── xtend@4.0.1</tspan>
+</text>
+</svg>

@@ -1,6 +1,6 @@
 # npmdoc-mercury
 
-#### api documentation for  [mercury (v14.1.0)](https://github.com/Raynos/mercury)  [![npm package](https://img.shields.io/npm/v/npmdoc-mercury.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mercury) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mercury.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mercury)
+#### basic api documentation for  [mercury (v14.1.0)](https://github.com/Raynos/mercury)  [![npm package](https://img.shields.io/npm/v/npmdoc-mercury.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-mercury) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-mercury.svg)](https://travis-ci.org/npmdoc/node-npmdoc-mercury)
 
 #### A truly modular frontend framework
 
@@ -21,21 +21,12 @@
 ```json
 
 {
-    "name": "mercury",
-    "version": "14.1.0",
-    "description": "A truly modular frontend framework",
-    "keywords": [
-        "framework",
-        "frontend",
-        "virtual",
-        "react",
-        "modular",
-        "web"
-    ],
-    "author": "Raynos <raynos2@gmail.com>",
-    "repository": "git://github.com/Raynos/mercury.git",
-    "main": "index.js",
-    "homepage": "https://github.com/Raynos/mercury",
+    "author": {
+        "name": "Raynos"
+    },
+    "bugs": {
+        "url": "https://github.com/Raynos/mercury/issues"
+    },
     "contributors": [
         {
             "name": "Raynos"
@@ -53,12 +44,10 @@
             "name": "nrw"
         }
     ],
-    "bugs": {
-        "url": "https://github.com/Raynos/mercury/issues"
-    },
     "dependencies": {
         "dom-delegator": "^13.0.1",
         "geval": "^2.1.1",
+        "http-hash-router": "~1.1.0",
         "main-loop": "^3.1.0",
         "observ": "^0.2.0",
         "observ-array": "^3.1.0",
@@ -67,9 +56,9 @@
         "value-event": "^5.0.0",
         "vdom-thunk": "^3.0.0",
         "virtual-dom": "^2.1.1",
-        "xtend": "^4.0.0",
-        "http-hash-router": "~1.1.0"
+        "xtend": "^4.0.0"
     },
+    "description": "A truly modular frontend framework",
     "devDependencies": {
         "backbone": "^1.1.2",
         "browserify": "^3.38.0",
@@ -104,7 +93,7 @@
         "run-parallel": "^1.0.0",
         "run-series": "^1.0.2",
         "st": "^0.4.1",
-        "synthetic-dom-events": "git://github.com/Raynos/synthetic-dom-events",
+        "synthetic-dom-events": "git://github.com/Raynos/synthetic-dom-events.git",
         "tap-spec": "^0.2.0",
         "tape": "^2.13.2",
         "valid-email": "0.0.1",
@@ -114,27 +103,59 @@
         "weakmap-shim": "^1.1.0",
         "zuul": "^1.9.0"
     },
+    "directories": {},
+    "dist": {
+        "shasum": "9789a5b59ac2faa98fe4e9a7d9f7207ff3814acb",
+        "tarball": "https://registry.npmjs.org/mercury/-/mercury-14.1.0.tgz"
+    },
+    "gitHead": "15512903702a4b496a98c3526595ca91acac68db",
+    "homepage": "https://github.com/Raynos/mercury",
+    "keywords": [
+        "framework",
+        "frontend",
+        "virtual",
+        "react",
+        "modular",
+        "web"
+    ],
     "licenses": [
         {
             "type": "MIT",
             "url": "http://github.com/Raynos/mercury/raw/master/LICENSE"
         }
     ],
+    "main": "index.js",
+    "maintainers": [
+        {
+            "name": "raynos"
+        },
+        {
+            "name": "mattesch"
+        }
+    ],
+    "name": "mercury",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/Raynos/mercury.git"
+    },
     "scripts": {
-        "disc": "browserify index.js --full-paths | discify > disc.html && opn disc.html",
-        "lint": "lint-trap",
-        "test": "npm run lint && node test/index.js | tap-spec",
-        "travis-test": "npm run phantom && npm run cover && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0) && zuul -- test/index.js",
-        "phantom": "run-browser test/index.js -b | tap-spec",
         "browser": "run-browser test/index.js",
-        "cover": "istanbul cover --report html --print detail ./test/index.js",
-        "view-cover": "istanbul report html && opn coverage/index.html",
         "build": "node bin/build.js",
-        "examples": "node bin/example-server.js",
+        "cover": "istanbul cover --report html --print detail ./test/index.js",
+        "disc": "browserify index.js --full-paths | discify > disc.html && opn disc.html",
         "dist": "node bin/dist.js",
         "dist-publish": "npm run dist && git add dist/mercury.js && git commit -m 'dist' && npm publish",
-        "modules-docs": "node bin/modules-docs.js"
-    }
+        "examples": "node bin/example-server.js",
+        "lint": "lint-trap",
+        "modules-docs": "node bin/modules-docs.js",
+        "phantom": "run-browser test/index.js -b | tap-spec",
+        "test": "npm run lint && node test/index.js | tap-spec",
+        "travis-test": "npm run phantom && npm run cover && istanbul report lcov && ((cat coverage/lcov.info | coveralls) || exit 0) && zuul -- test/index.js",
+        "view-cover": "istanbul report html && opn coverage/index.html"
+    },
+    "version": "14.1.0",
+    "bin": {}
 }
 ```
 
